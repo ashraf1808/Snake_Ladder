@@ -5,8 +5,9 @@ A modern, interactive web-based version of the classic board game, built with pu
 **Live Demo:** **[https://snakeandladder234.netlify.app/](https://snakeandladder234.netlify.app/)**
 
 ![Screenshot of the Snake and Ladder game board](s1.png)
+
 ![Screenshot of the Snake and Ladder game board](s2.png)
-*(To add a screenshot: Take a picture of your running app, name it `screenshot.png`, and place it in the main project folder. Then, update the line above to `![Screenshot...](screenshot.png)`)*
+
 
 -----
 
@@ -65,5 +66,6 @@ To get a local copy up and running, follow these simple steps.
 
 ### 🤝 Contact
 
-Your Name - @https://github.com/Ashrafpashamohammad
+Contact - @https://github.com/Ashrafpashamohammad
+
 Project Link: https://github.com/Ashrafpashamohammad/Snake_Ladder
