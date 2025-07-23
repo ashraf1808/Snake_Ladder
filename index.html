@@ -1,26 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Snake and Ladder Game</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake and Ladder Deluxe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="player-setup">
-    <h2>Snake and Ladder</h2>
-    <label for="numPlayers">Number of Players (2-4):</label>
-    <input type="number" id="numPlayers" min="2" max="4" />
-    <button onclick="startGame()">Start Game</button>
-  </div>
+<body class="bg-slate-100">
 
-  <div id="game-container" style="display:none;">
-    <canvas id="board" width="600" height="600"></canvas>
-    <p id="currentPlayer"></p>
-    <button onclick="rollDice()">Roll Dice</button>
-    <p id="diceResult"></p>
-  </div>
+<!-- Changed justify-center to lg:justify-evenly to better space the items on large screens -->
+<div id="game-ui" class="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:justify-evenly gap-8 p-4">
+    
+    <!-- Main Game Area Container -->
+    <div class="flex flex-col items-center gap-4">
+        <h1 class="bungee-font text-3xl text-center text-slate-700">Snake & Ladder Deluxe</h1>
+        <!-- Game Board -->
+        <div class="game-board" id="game-board">
+            <div class="snakes-ladders-container" id="snakes-ladders-container"></div>
+            <div id="player-container"></div>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Controls Panel -->
+    <div id="controls-panel" class="w-full max-w-sm lg:w-80 bg-white p-4 rounded-2xl shadow-xl flex flex-col gap-4 hidden">
+        <div class="dice-area text-center p-4 bg-slate-100 rounded-lg">
+            <p id="turn-indicator" class="font-semibold text-slate-600 mb-2 h-6"></p>
+            <div class="dice-container mx-auto mb-4">
+                <div id="dice">
+                    <div class="face front">1</div>
+                    <div class="face back">6</div>
+                    <div class="face right">4</div>
+                    <div class="face left">3</div>
+                    <div class="face top">2</div>
+                    <div class="face bottom">5</div>
+                </div>
+            </div>
+            <p id="dice-result" class="font-bold text-2xl text-slate-700 h-8 mt-2"></p>
+        </div>
+        <div class="flex gap-2">
+            <button id="rollDiceBtn" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 disabled:bg-slate-400 disabled:cursor-not-allowed">
+                Roll Dice
+            </button>
+            <button id="quitBtn" onclick="location.reload()" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                Restart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Setup Modal -->
+<div id="setup-modal" class="modal fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl w-11/12 max-w-md text-center">
+        <h2 class="bungee-font text-3xl mb-4 text-slate-700">Game Setup</h2>
+        <div class="mb-4">
+            <label for="numPlayers" class="block mb-2 font-semibold text-slate-600">Number of Players:</label>
+            <select id="numPlayers" class="w-full p-2 border border-slate-300 rounded-lg">
+                <option value="2">2 Players</option>
+                <option value="3">3 Players</option>
+                <option value="4">4 Players</option>
+            </select>
+        </div>
+        <div id="player-inputs" class="space-y-3 mb-6"></div>
+        <button id="start-game-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">Start Game</button>
+    </div>
+</div>
+
+<!-- Winner Modal -->
+<div id="winner-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl text-center transform scale-95 transition-transform">
+        <h2 id="winner-message" class="text-4xl font-bold mb-4 text-yellow-500"></h2>
+        <p class="text-slate-600 mb-6">Congratulations!</p>
+        <button onclick="location.reload()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg">Play Again</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
