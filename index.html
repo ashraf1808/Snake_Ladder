@@ -139,23 +139,19 @@
     </div>
 </div>
 
+<!-- Load the config file first (this is not on GitHub) -->
+<script src="config.js"></script>
+
 <!-- Firebase SDKs -->
 <script type="module">
+  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
   import { getFirestore, doc, setDoc, getDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
   
-  const firebaseConfig = {
-    apiKey: "AIzaSyD0_ecrJkrVb0L_VwShtNdzcT5FSI8uc9E",
-    authDomain: "snake-and-ladder-deluxe.firebaseapp.com",
-    projectId: "snake-and-ladder-deluxe",
-    storageBucket: "snake-and-ladder-deluxe.appspot.com",
-    messagingSenderId: "626475886057",
-    appId: "1:626475886057:web:76405f19cf3ff36aea1778",
-    measurementId: "G-N41B8C3RJR"
-  };
-
+  // The firebaseConfig variable is now available globally from config.js
   const app = initializeApp(firebaseConfig);
   
+  // Make Firebase functions available globally
   window.db = getFirestore(app);
   window.firebase = {
       doc, setDoc, getDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp

@@ -1,4 +1,3 @@
-
 # Snake and Ladder Deluxe 🐍🪜
 
 A modern, feature-rich web version of the classic board game, built with pure HTML, CSS, and JavaScript. It supports online multiplayer, local multiplayer, and a single-player mode against the computer.
