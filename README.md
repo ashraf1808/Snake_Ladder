@@ -71,4 +71,4 @@ To get a local copy up and running, follow these simple steps.
 
 GitHub - @https://github.com/ashraf1808
 
-Project Link: @[https://github.com/ashraf1808/Snake_Ladder](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME)
+Project Link: @[https://github.com/ashraf1808/Snake_Ladder](https://github.com/ashraf1808/Snake_Ladder)
