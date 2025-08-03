@@ -2,7 +2,7 @@
 
 A modern, feature-rich web version of the classic board game, built with pure HTML, CSS, and JavaScript. It supports online multiplayer, local multiplayer, and a single-player mode against the computer.
 
-**Live Demo:** **[[https://snakeandladder234.netlify.app/](https://snakeandladder234.netlify.app/)**
+**Live Demo:** **[https://snakeandladder234.netlify.app/](https://snakeandladder234.netlify.app/)**
 
 ![Screenshot of the Snake and Ladder game board](s1.png)
 ![Screenshot of the Snake and Ladder game board](s2.png)
