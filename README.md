@@ -7,7 +7,6 @@ A modern, feature-rich web version of the classic board game, built with pure HT
 ![Screenshot of the Snake and Ladder game board](s1.png)
 ![Screenshot of the Snake and Ladder game board](s2.png)
 
-*(To update the screenshot: Take a picture of your running app, name it `screenshot.png`, and place it in the main project folder.)*
 
 -----
 
@@ -71,4 +70,5 @@ To get a local copy up and running, follow these simple steps.
 ### 🤝 Contact
 
 GitHub - @https://github.com/ashraf1808
+
 Project Link: [https://github.com/ashraf1808/Snake_Ladder](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME)
